@@ -9,9 +9,11 @@ function input(inputValue,fund,fundElement,fundName){
     if (isNaN(inputValue) || inputValue < 0)
     {
         alert('Invalid Donation amount!')
+        
     }
     else if (balance < inputValue){
         alert("Your account does not have enough balance!")
+        
     }
     else{
         balance = balance - inputValue;

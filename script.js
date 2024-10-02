@@ -46,19 +46,28 @@ historyBtn.addEventListener("click", function() {
 });
 
 donateBtn1.addEventListener('click',function(){
-    let inputValue = parseFloat(input1.value)
+    let inputValue = parseFloat(input1.value)    
     input(inputValue,fund1,fund1Element,fundName1)
-    fund1 = fund1 + inputValue;
+    if (!isNaN(inputValue) && inputValue > 0 && balance > inputValue){
+        fund1 = fund1 + inputValue;
+    }
+    input1.value=''
 });
 donateBtn2.addEventListener('click',function(){
     let inputValue = parseFloat(input2.value)
     input(inputValue,fund2,fund2Element,fundName2)
-    fund2 = fund2 + inputValue;
+    if (!isNaN(inputValue) && inputValue > 0 && balance > inputValue){
+        fund2 = fund2 + inputValue;
+    }
+    input2.value=''
 });
 donateBtn3.addEventListener('click',function(){
     let inputValue = parseFloat(input3.value)
     input(inputValue,fund3,fund3Element,fundName3)
-    fund3 = fund3 + inputValue;
+    if (!isNaN(inputValue) && inputValue > 0 && balance > inputValue){
+        fund3 = fund3 + inputValue;
+    }
+    input3.value=''
 });
 
 // popUp
